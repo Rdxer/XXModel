@@ -1,0 +1,27 @@
+{
+  "name": "XXModel",
+  "version": "0.1.0",
+  "summary": "A short description of XXModel.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/XXModel",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "LXF": "rdxer@foxmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/XXModel.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "XXModel/Classes/**/*",
+  "dependencies": {
+    "JRSwizzle": [
+      "~> 1.0"
+    ]
+  }
+}
