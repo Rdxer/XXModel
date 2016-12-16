@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XXModel'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = '超轻量级字典转模型框架.'
 
 # This description is used to generate tags and improve search results.
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   自用,超轻量级字典转模型框架
                        DESC
 
-  s.homepage         = 'https://github.com/rdxer/XXModel'
+  s.homepage         = 'http://rdxer.top'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'LXF' => 'rdxer@foxmail.com' }
