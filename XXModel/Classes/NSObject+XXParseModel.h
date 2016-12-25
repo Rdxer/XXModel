@@ -18,12 +18,12 @@
 +(NSDictionary *)xx_convertKeys;
 
 /**
- 需要将制定的key转化为对应的对象
+ 需要将指定的key转化为对应的对象
  */
 +(NSDictionary *)xx_ModelKeys;
 
 /**
- 需要将制定的key转化为对应的对象列表
+ 需要将指定的key转化为对应的对象列表
  */
 +(NSDictionary *)xx_ArrayModelKeys;
 
@@ -34,11 +34,11 @@
 
 /**
  单字典->单模型
-
+ 
  @param dict 字典
  @return 模型
  */
-+(id)xx_modelWithDict:(NSDictionary *)dict;
++(instancetype)xx_modelWithDictionary:(NSDictionary *)dict;
 
 /**
  字典数组->模型数组
@@ -46,7 +46,7 @@
  @param dicts 字典数组
  @return 模型数组
  */
-+(NSArray *)xx_modelsWithDicts:(NSArray *)dicts;
++(NSArray *)xx_modelArrayWithDictionaryArray:(NSArray *)dicts;
 
 /**
  jsonString -> Model
@@ -54,7 +54,16 @@
  @param jsonStr JSON字符串
  @return 模型
  */
-+(id)xx_modelWithJSONString:(NSString *)jsonStr;
++(instancetype)xx_modelWithJSONString:(NSString *)jsonStr;
+
+/**
+ jsonString -> ModelArray
+ 
+ @param jsonStr JSON字符串
+ @return 模型数组
+ */
++(NSArray *)xx_modelArrayWithJSONString:(NSString *)jsonStr;
+
 
 /**
  键值转化

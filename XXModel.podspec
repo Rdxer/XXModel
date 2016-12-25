@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XXModel'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = '超轻量级字典转模型框架.'
 
 # This description is used to generate tags and improve search results.

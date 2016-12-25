@@ -29,7 +29,7 @@
     }
 }
 
-+(id)xx_modelWithDict:(NSDictionary *)dict{
++(id)xx_modelWithDictionary:(NSDictionary *)dict{
     id clazz = self;
     id instence = [[clazz alloc] init];
     
@@ -53,7 +53,7 @@
                         clazz = obj;
                     }
                     
-                    id newobj = [clazz xx_modelWithDict:v];
+                    id newobj = [clazz xx_modelWithDictionary:v];
                     
                     [instence setValue:newobj forKey:key];
                 }else{
@@ -74,7 +74,7 @@
                 id v = [dictM valueForKey:key];
                 [dictM removeObjectForKey:key];
                 if (v && [v isKindOfClass:[NSArray class]]) {
-                    id newobjList = [obj xx_modelsWithDicts:v];
+                    id newobjList = [obj xx_modelArrayWithDictionaryArray:v];
                     [instence setValue:newobjList forKey:key];
                 }else{
                     if (v) {
@@ -92,23 +92,40 @@
     return instence;
 }
 
-+(NSArray *)xx_modelsWithDicts:(NSArray *)dicts{
++(NSArray *)xx_modelArrayWithDictionaryArray:(NSArray *)dicts{
     NSMutableArray * arrrayM = @[].mutableCopy;
     for (NSDictionary *dict in dicts) {
-        [arrrayM addObject:[self xx_modelWithDict:dict]];
+        id obj = [self xx_modelWithDictionary:dict];
+        if (obj == nil) {
+            return nil;
+        }
+        [arrrayM addObject:obj];
     }
     return arrrayM;
 }
 
-+(id)xx_modelWithJSONString:(NSString *)jsonStr{
++(instancetype)xx_modelWithJSONString:(NSString *)jsonStr{
     NSError *error = nil;
     id result = [NSJSONSerialization JSONObjectWithData:[jsonStr dataUsingEncoding:NSUTF8StringEncoding] options:0 error:&error];
     if (result == nil || [result isKindOfClass:[NSDictionary class]] == NO) {
         NSLog(@"此 JSONString 不是 字典的 JSON 字符串 %@, error: %@", jsonStr, error);
         return nil;
     }
-    return [self xx_modelWithDict:result];
+    return [self xx_modelWithDictionary:result];
 }
+
+//
++(NSArray *)xx_modelArrayWithJSONString:(NSString *)jsonStr{
+    NSError *error = nil;
+    id result = [NSJSONSerialization JSONObjectWithData:[jsonStr dataUsingEncoding:NSUTF8StringEncoding] options:0 error:&error];
+    if (result == nil || [result isKindOfClass:[NSArray class]] == NO) {
+        NSLog(@"此 JSONString 不是 数组的 JSON 字符串 %@, error: %@", jsonStr, error);
+        return nil;
+    }
+    return [self xx_modelArrayWithDictionaryArray:result];
+}
+
+
 
 +(NSDictionary *)xx_convertKeys{
     return @{
@@ -130,7 +147,7 @@
 
 -(void)xx_setNilValueForKey:(NSString *)key{
     if ([self conformsToProtocol:@protocol(XXParseModel)]) {
-//        [self setValue:@(0) forKey:[[self class] xx_convertKeys][key]];
+        //        [self setValue:@(0) forKey:[[self class] xx_convertKeys][key]];
         NSLog(@"setNilValueForKey k(%@) => Class(%@)",key,self.class);
     }else{
         [self xx_setNilValueForKey:key];
