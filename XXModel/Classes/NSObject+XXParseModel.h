@@ -15,17 +15,17 @@
 /**
  key <=> key 转化
  */
-+(NSDictionary *)xx_convertKeys;
++(nonnull NSDictionary *)xx_convertKeys;
 
 /**
  需要将指定的key转化为对应的对象
  */
-+(NSDictionary *)xx_ModelKeys;
++(nonnull NSDictionary *)xx_ModelKeys;
 
 /**
  需要将指定的key转化为对应的对象列表
  */
-+(NSDictionary *)xx_ArrayModelKeys;
++(nonnull NSDictionary *)xx_ArrayModelKeys;
 
 @end
 
@@ -38,7 +38,7 @@
  @param dict 字典
  @return 模型
  */
-+(instancetype)xx_modelWithDictionary:(NSDictionary *)dict;
++(nullable instancetype)xx_modelWithDictionary:(nonnull NSDictionary *)dict;
 
 /**
  字典数组->模型数组
@@ -46,7 +46,7 @@
  @param dicts 字典数组
  @return 模型数组
  */
-+(NSArray *)xx_modelArrayWithDictionaryArray:(NSArray *)dicts;
++(nullable NSArray *)xx_modelArrayWithDictionaryArray:(nonnull NSArray *)dicts;
 
 /**
  jsonString -> Model
@@ -54,7 +54,7 @@
  @param jsonStr JSON字符串
  @return 模型
  */
-+(instancetype)xx_modelWithJSONString:(NSString *)jsonStr;
++(nullable instancetype)xx_modelWithJSONString:(nonnull NSString *)jsonStr;
 
 /**
  jsonString -> ModelArray
@@ -62,13 +62,13 @@
  @param jsonStr JSON字符串
  @return 模型数组
  */
-+(NSArray *)xx_modelArrayWithJSONString:(NSString *)jsonStr;
++(nullable NSArray *)xx_modelArrayWithJSONString:(nonnull NSString *)jsonStr;
 
 
 /**
  键值转化
  */
-+(NSDictionary *)xx_convertKeys;
++(nonnull NSDictionary *)xx_convertKeys;
 
 // -(NSString *)xx_toJsonString;
 

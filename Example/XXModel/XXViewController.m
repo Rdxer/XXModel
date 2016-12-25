@@ -27,7 +27,7 @@
 //    NSString *str = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
     NSData *data = [NSData dataWithContentsOfFile:path];
     id jsonDict = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
-    NSArray<Person *> *array = [Person xx_modelsWithDicts:jsonDict[@"data"]];
+    NSArray<Person *> *array = [Person xx_modelArrayWithDictionaryArray:jsonDict[@"data"]];
     NSLog(@"%@",array);
 }
 
