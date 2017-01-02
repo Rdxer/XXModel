@@ -1,9 +1,9 @@
 {
   "name": "XXModel",
-  "version": "0.1.0",
-  "summary": "A short description of XXModel.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/XXModel",
+  "version": "1.0.1",
+  "summary": "超轻量级字典转模型框架.",
+  "description": "自用,超轻量级字典转模型框架",
+  "homepage": "http://rdxer.top",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,11 @@
     "LXF": "rdxer@foxmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/XXModel.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/rdxer/XXModel.git",
+    "tag": "1.0.1"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "7.0"
   },
   "source_files": "XXModel/Classes/**/*",
   "dependencies": {

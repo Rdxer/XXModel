@@ -10,10 +10,12 @@
 
 #import "XXModel.h"
 
+#import "XXSuperClass.h"
+
 @class Cat;
 @class Phone;
 
-@interface Person : NSObject<XXParseModel>
+@interface Person : XXSuperClass<XXParseModel>
 
 @property (nonatomic, strong) Cat *cat;
 @property (nonatomic, copy) NSString *identifier;

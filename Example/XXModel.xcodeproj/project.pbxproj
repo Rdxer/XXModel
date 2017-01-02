@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E10E27B1E1A2D1D00314C73 /* XXSuperClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E10E27A1E1A2D1D00314C73 /* XXSuperClass.m */; };
 		3EBF4C0A1E0399CD000E74F4 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 3EBF4C091E0399CD000E74F4 /* test.json */; };
 		3EBF4C141E0399E1000E74F4 /* APP.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBF4C0D1E0399E1000E74F4 /* APP.m */; };
 		3EBF4C151E0399E1000E74F4 /* Cat.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBF4C0F1E0399E1000E74F4 /* Cat.m */; };
@@ -43,6 +44,8 @@
 /* Begin PBXFileReference section */
 		0164B392AC7CBF76AA1AFEDA /* Pods-XXModel_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXModel_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XXModel_Tests/Pods-XXModel_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1C79D1B7D4AA66C8FDCBD95B /* Pods-XXModel_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXModel_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-XXModel_Example/Pods-XXModel_Example.release.xcconfig"; sourceTree = "<group>"; };
+		3E10E2791E1A2D1D00314C73 /* XXSuperClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XXSuperClass.h; sourceTree = "<group>"; };
+		3E10E27A1E1A2D1D00314C73 /* XXSuperClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XXSuperClass.m; sourceTree = "<group>"; };
 		3EBF4C091E0399CD000E74F4 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		3EBF4C0C1E0399E1000E74F4 /* APP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APP.h; sourceTree = "<group>"; };
 		3EBF4C0D1E0399E1000E74F4 /* APP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APP.m; sourceTree = "<group>"; };
@@ -116,6 +119,8 @@
 				3EBF4C0F1E0399E1000E74F4 /* Cat.m */,
 				3EBF4C101E0399E1000E74F4 /* Person.h */,
 				3EBF4C111E0399E1000E74F4 /* Person.m */,
+				3E10E2791E1A2D1D00314C73 /* XXSuperClass.h */,
+				3E10E27A1E1A2D1D00314C73 /* XXSuperClass.m */,
 				3EBF4C121E0399E1000E74F4 /* Phone.h */,
 				3EBF4C131E0399E1000E74F4 /* Phone.m */,
 			);
@@ -429,6 +434,7 @@
 				3EBF4C171E0399E1000E74F4 /* Phone.m in Sources */,
 				6003F5A7195388D20070C39A /* XXViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				3E10E27B1E1A2D1D00314C73 /* XXSuperClass.m in Sources */,
 				3EBF4C151E0399E1000E74F4 /* Cat.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
