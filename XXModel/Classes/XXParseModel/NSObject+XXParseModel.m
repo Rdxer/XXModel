@@ -10,7 +10,7 @@
 #import "JRSwizzle.h"
 #import "NSObject+XXProperty.h"
 
-@interface NSObject (XXParseModel_protocol)
+@interface NSObject (XXParseModel)
 
 
 /////////////////////////////////////////////////////////////
