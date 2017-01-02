@@ -10,7 +10,7 @@
 
 #import "NSObject+XXProperty.h"
 
-@protocol XXParseModel <XXProperty>
+@protocol XXParseModel <NSObject>
 
 @optional
 

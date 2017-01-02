@@ -15,19 +15,19 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '7.0'
   s.source_files = 'XXModel/Classes/XXModel.h'
-  s.public_header_files = 'XXModel/Classes/XXModel.h'
+#  s.public_header_files = 'XXModel/Classes/XXModel.h'
 
 
   s.subspec 'XXProperty' do |ss|
     ss.source_files = 'XXModel/Classes/XXProperty/**/*'
-    ss.public_header_files = 'XXModel/Classes/XXProperty/NSObject+XXProperty.h'
+#    ss.public_header_files = 'XXModel/Classes/XXProperty/NSObject+XXProperty.h'
   end
 
   s.subspec 'XXParseModel' do |ss|
     ss.dependency 'JRSwizzle', '~> 1.0'
     ss.dependency 'XXModel/XXProperty'
     ss.source_files = 'XXModel/Classes/XXParseModel/**/*'
-    ss.public_header_files = 'XXModel/Classes/XXParseModel/NSObject+XXParseModel.h'
+# ss.public_header_files = 'XXModel/Classes/XXParseModel/NSObject+XXParseModel.h'
   end
 
 end
