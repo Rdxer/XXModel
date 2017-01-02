@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   自用,超轻量级字典转模型框架
                        DESC
 
-  s.homepage         = 'http://rdxer.top'
+  s.homepage         = 'https://github.com/rdxer/XXModel'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'LXF' => 'rdxer@foxmail.com' }
   s.source           = { :git => 'https://github.com/rdxer/XXModel.git', :tag => s.version.to_s }
