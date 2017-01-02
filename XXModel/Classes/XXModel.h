@@ -10,5 +10,6 @@
 #define XXModel_h
 
 #import "NSObject+XXParseModel.h"
+#import "NSObject+XXProperty.h"
 
 #endif /* XXModel_h */
