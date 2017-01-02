@@ -14,19 +14,9 @@ Pod::Spec.new do |s|
 
 
   s.ios.deployment_target = '7.0'
-
   s.source_files = 'XXModel/Classes/XXModel.h'
   s.public_header_files = 'XXModel/Classes/XXModel.h'
 
-  # s.resource_bundles = {
-  #   'XXModel' => ['XXModel/Assets/*.png']
-  # }
-
-
-  # s.dependency 'AFNetworking', '~> 2.3'
-
-
-  # dependency
 
   s.subspec 'XXProperty' do |ss|
     ss.source_files = 'XXModel/Classes/XXProperty/**/*'
@@ -35,7 +25,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'XXParseModel' do |ss|
     ss.dependency 'JRSwizzle', '~> 1.0'
-    ss.dependency 'XXProperty'
+    ss.dependency 'XXModel/XXProperty'
     ss.source_files = 'XXModel/Classes/XXParseModel/**/*'
     ss.public_header_files = 'XXModel/Classes/XXParseModel/NSObject+XXParseModel.h'
   end
