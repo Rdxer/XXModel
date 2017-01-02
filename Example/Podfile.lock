@@ -11,8 +11,13 @@ PODS:
     - FBSnapshotTestCase/Core
   - JRSwizzle (1.0)
   - Specta (1.0.5)
-  - XXModel (1.0.1):
+  - XXModel (1.1.0):
+    - XXModel/XXParseModel (= 1.1.0)
+    - XXModel/XXProperty (= 1.1.0)
+  - XXModel/XXParseModel (1.1.0):
     - JRSwizzle (~> 1.0)
+    - XXModel/XXProperty
+  - XXModel/XXProperty (1.1.0)
 
 DEPENDENCIES:
   - Expecta
@@ -31,7 +36,7 @@ SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
   Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
-  XXModel: aa6aee8270609ea5572cbea0909710c1b927980d
+  XXModel: 02acf6e995a3505ca24895f87a6f6b59077a57ea
 
 PODFILE CHECKSUM: 2d9310a914124d6e796fe9d99c2ffbfa6ffc67c4
 
