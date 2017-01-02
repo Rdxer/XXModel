@@ -13,6 +13,7 @@
 
 @protocol XXProperty <NSObject>
 
+@optional
 /// 当前类有哪些需要过滤的再次返回即可
 + (NSArray<NSString *> *)xx_ignorePropertyNameArray;
 

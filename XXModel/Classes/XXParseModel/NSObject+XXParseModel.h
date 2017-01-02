@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+#import "NSObject+XXProperty.h"
 
-
-@protocol XXParseModel <NSObject>
+@protocol XXParseModel <XXProperty>
 
 @optional
 
