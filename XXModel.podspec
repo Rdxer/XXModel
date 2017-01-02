@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'XXModel'
-  s.version          = '1.0.1'
+  s.version          = '1.1.0'
   s.summary          = '超轻量级字典转模型框架.'
 
   s.description      = <<-DESC
