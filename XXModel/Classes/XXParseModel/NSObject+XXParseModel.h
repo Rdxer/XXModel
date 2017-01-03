@@ -130,6 +130,90 @@
     
 @end
 
+
+@interface NSObject (XXParseModel_protocol)
+
+
+/////////////////////////////////////////////////////////////
+//////////////////     能够直接调用,协议已经实现    //////////////
+
+//-----------------------  dict -> model   ----------------
+/**
+ 单字典->单模型
+ 
+ @param dict 字典
+ @return 模型
+ */
++(nullable instancetype)xx_modelWithDictionary:(nullable NSDictionary *)dict;
+
+/**
+ 字典数组->模型数组
+ 
+ @param dicts 字典数组
+ @return 模型数组
+ */
++(nullable NSArray *)xx_modelArrayWithDictionaryArray:(nullable NSArray *)dicts;
+
+
+
+//-----------------------  json -> model  ----------------
+/**
+ jsonString -> Model
+ 
+ @param jsonStr JSON字符串
+ @return 模型
+ */
++(nullable instancetype)xx_modelWithJSONString:(nonnull NSString *)jsonStr;
+
+/**
+ jsonString -> ModelArray
+ 
+ @param jsonStr JSON字符串
+ @return 模型数组
+ */
++(nullable NSArray *)xx_modelArrayWithJSONString:(nonnull NSString *)jsonStr;
+
+
+/////////////////////////////////////////////////////////////////
+//////////////////////////   默认进行键值映射转化   /////////////////
+
+//-----------------------  model -> json  ----------------
+/**
+ 模型转成json字符串
+ 
+ @return JSON字符串
+ */
+-(nullable NSString *)xx_toJsonString;
+
+//-----------------------  model -> dict  ----------------
+/**
+ 模型转成字典
+ 
+ @return dict
+ */
+-(nonnull NSMutableDictionary<NSString *,id> *)xx_toDictionary;
+
+/////////////////////////////////////////////////////////////////
+//////////////////////////  不进行键值映射转化   //////////////////////////
+
+//-----------------------  model -> json  ----------------
+/**
+ 模型转成json字符串
+ 
+ @return JSON字符串
+ */
+-(nullable NSString *)xx_toJsonString_Dont_Map;
+
+//-----------------------  model -> dict  ----------------
+/**
+ 模型转成字典
+ 
+ @return dict
+ */
+-(nonnull NSMutableDictionary<NSString *,id> *)xx_toDictionary_Dont_Map;
+
+@end
+
 @interface NSArray (XXParseModel)
 /////////////////////////////////////////////////////////////////
 //////////////////////////   进行键值映射转化   /////////////////
