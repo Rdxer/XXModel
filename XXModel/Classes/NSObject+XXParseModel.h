@@ -18,12 +18,12 @@
 +(NSDictionary *)xx_convertKeys;
 
 /**
- 需要将制定的key转化为对应的对象
+ 需要将指定的key转化为对应的对象
  */
 +(NSDictionary *)xx_ModelKeys;
 
 /**
- 需要将制定的key转化为对应的对象列表
+ 需要将指定的key转化为对应的对象array
  */
 +(NSDictionary *)xx_ArrayModelKeys;
 
