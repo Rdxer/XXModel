@@ -20,6 +20,8 @@ it, simply add the following line to your Podfile:
 pod "XXModel"
 ```
 
+数组的范型遵守 <XXParseModel> 协议
+
 ## Author
 
 LXF, rdxer@foxmail.com
