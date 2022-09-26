@@ -20,8 +20,20 @@ it, simply add the following line to your Podfile:
 pod "XXModel"
 ```
 
-数组的范型遵守 <XXParseModel> 协议
+1. 序列化内的所有模型遵守 <XXParseModel> 协议
+  
+2. 模型的字段对应的class，除了遵守协议外，还需要对字段指定类型，因为OC的类型机制是编译时的范型
+ 
+  +(NSDictionary *)xx_ModelKeys{
+      return @{@"cat":@"Cat"};
+  }
 
+  +(NSDictionary *)xx_ArrayModelKeys{
+      return @{@"phone":[Phone class]};
+  }
+  
+
+  
 ## Author
 
 LXF, rdxer@foxmail.com
