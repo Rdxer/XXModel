@@ -24,14 +24,24 @@ pod "XXModel"
   
 2. 模型的字段对应的class，除了遵守协议外，还需要对字段指定类型，因为OC的类型机制是编译时的范型
  
-  +(NSDictionary *)xx_ModelKeys{
-      return @{@"cat":@"Cat"};
-  }
+```
+  /**
+ jsonkey <=> modelkey 转换,如果父类实现了,请同父类的一起返回
+ 属性映射字典
+ */
++(nonnull NSDictionary<NSString *,NSString *> *)xx_propertyMapDictionary;
 
-  +(NSDictionary *)xx_ArrayModelKeys{
-      return @{@"phone":[Phone class]};
-  }
+/**
+ 需要将指定的key转化为对应的对象,如果父类实现了,请同父类的一起返回
+ */
++(nonnull NSDictionary *)xx_ModelPropertyDictionary;
+
+/**
+ 需要将指定的key转化为对应的对象列表,如果父类实现了,请同父类的一起返回
+ */
++(nonnull NSDictionary *)xx_ArrayModelPropertyDictionary;
   
+```
 
   
 ## Author
