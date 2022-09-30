@@ -1,4 +1,6 @@
-# XXModel
+# 不支持 Swift4+ ， 请使用 Codable
+
+# XXModel  
 
 [![CI Status](http://img.shields.io/travis/LXF/XXModel.svg?style=flat)](https://travis-ci.org/LXF/XXModel)
 [![Version](https://img.shields.io/cocoapods/v/XXModel.svg?style=flat)](http://cocoapods.org/pods/XXModel)
